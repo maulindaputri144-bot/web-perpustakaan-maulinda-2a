@@ -1,0 +1,645 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+/* =================================
+   1. WARNA DAN PENGATURAN DASAR
+================================= */
+
+:root {
+    --sage: #dfe8da;
+    --sage-dark: #526b58;
+    --forest: #344b3b;
+    --cream: #f7f5ec;
+    --gold: #c6a66b;
+    --text: #526254;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--sage);
+    color: var(--forest);
+    overflow: hidden;
+}
+
+/* =================================
+   2. LAYOUT UTAMA
+================================= */
+
+.launch-screen {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
+    padding: 30px 7%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    isolation: isolate;
+    background:
+        radial-gradient(
+            circle at 50% 44%,
+            rgba(255, 255, 255, 0.75),
+            transparent 38%
+        ),
+        linear-gradient(
+            135deg,
+            #edf1e7 0%,
+            #dfe8da 55%,
+            #d5e1d4 100%
+        );
+}
+
+/* =================================
+   3. DEKORASI LATAR
+================================= */
+
+.background-circle {
+    position: absolute;
+    z-index: -1;
+    border: 1px solid rgba(82, 107, 88, 0.13);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.circle-one {
+    width: 420px;
+    height: 420px;
+    top: -230px;
+    right: -100px;
+}
+
+.circle-two {
+    width: 340px;
+    height: 340px;
+    bottom: -210px;
+    left: -100px;
+}
+
+.background-dot {
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--gold);
+    opacity: 0.7;
+}
+
+.dot-one {
+    top: 25%;
+    left: 12%;
+}
+
+.dot-two {
+    top: 34%;
+    right: 14%;
+    width: 5px;
+    height: 5px;
+}
+
+.dot-three {
+    bottom: 20%;
+    right: 22%;
+    width: 6px;
+    height: 6px;
+}
+
+/* =================================
+   4. HEADER / BRAND
+================================= */
+
+.launch-header {
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    color: var(--forest);
+    animation: fadeDown 0.8s ease both;
+}
+
+.brand-mark {
+    width: 43px;
+    height: 43px;
+    display: grid;
+    place-items: center;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.78);
+    box-shadow: 0 6px 18px rgba(52, 75, 59, 0.08);
+    font-size: 21px;
+}
+
+/* =================================
+   5. KONTEN UTAMA
+================================= */
+
+.launch-content {
+    width: 100%;
+    max-width: 650px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    animation: fadeUp 1s ease both;
+}
+
+.eyebrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: #7d927e;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2.6px;
+}
+
+.eyebrow-line {
+    width: 24px;
+    height: 1px;
+    background: var(--gold);
+}
+
+.launch-content h1 {
+    margin-top: 20px;
+    color: var(--forest);
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(44px, 6vw, 68px);
+    font-weight: 600;
+    line-height: 1.12;
+    letter-spacing: -1.5px;
+}
+
+.launch-content h1 span {
+    color: #789276;
+    font-style: italic;
+}
+
+.launch-description {
+    max-width: 420px;
+    margin-top: 18px;
+    color: #758477;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+/* =================================
+   6. ILUSTRASI BUKU
+================================= */
+
+.book-scene {
+    position: relative;
+    width: 350px;
+    height: 205px;
+    margin-top: 8px;
+}
+
+.scene-glow {
+    position: absolute;
+    width: 190px;
+    height: 190px;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* Buku bertumpuk */
+
+.book-stack {
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    bottom: 32px;
+    transform: translateX(-50%);
+    width: 165px;
+    height: 80px;
+}
+
+.stack-book {
+    position: absolute;
+    height: 17px;
+    border-radius: 4px;
+    box-shadow: inset 0 2px rgba(255, 255, 255, 0.3);
+}
+
+.stack-one {
+    width: 155px;
+    bottom: 0;
+    left: 5px;
+    background: #9a8066;
+}
+
+.stack-two {
+    width: 145px;
+    bottom: 19px;
+    left: 12px;
+    background: #d0ad78;
+}
+
+.stack-three {
+    width: 132px;
+    bottom: 38px;
+    left: 18px;
+    background: #718c75;
+}
+
+/* Buku terbuka */
+
+.open-book {
+    position: absolute;
+    z-index: 4;
+    left: 50%;
+    bottom: 47px;
+    transform: translateX(-50%);
+    display: flex;
+    width: 150px;
+    height: 65px;
+    filter: drop-shadow(0 5px 5px rgba(52, 75, 59, 0.12));
+}
+
+.open-page {
+    width: 75px;
+    height: 57px;
+    padding: 17px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background: #fffdf5;
+    border: 1px solid #e4decd;
+}
+
+.page-left {
+    border-radius: 7px 2px 3px 5px;
+    transform: skewY(7deg);
+}
+
+.page-right {
+    border-radius: 2px 7px 5px 3px;
+    transform: skewY(-7deg);
+}
+
+.open-page span {
+    display: block;
+    height: 2px;
+    border-radius: 5px;
+    background: #d9dfd1;
+}
+
+.open-page span:nth-child(2) {
+    width: 85%;
+}
+
+.open-page span:nth-child(3) {
+    width: 65%;
+}
+
+.book-center {
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    top: 0;
+    width: 2px;
+    height: 55px;
+    transform: translateX(-50%);
+    background: #c6b99d;
+}
+
+/* Tanaman */
+
+.plant {
+    position: absolute;
+    z-index: 3;
+    right: 28px;
+    bottom: 30px;
+    width: 60px;
+    height: 125px;
+}
+
+.plant-stem {
+    position: absolute;
+    left: 29px;
+    bottom: 45px;
+    width: 3px;
+    height: 75px;
+    border-radius: 5px;
+    background: #647e62;
+    transform: rotate(5deg);
+}
+
+.plant-leaf {
+    position: absolute;
+    width: 23px;
+    height: 13px;
+    border-radius: 100% 0 100% 0;
+    background: #789477;
+}
+
+.leaf-one {
+    left: 7px;
+    top: 26px;
+    transform: rotate(20deg);
+}
+
+.leaf-two {
+    left: 29px;
+    top: 13px;
+    transform: rotate(-35deg);
+}
+
+.leaf-three {
+    left: 2px;
+    top: 3px;
+    transform: rotate(25deg);
+}
+
+.leaf-four {
+    left: 30px;
+    top: -9px;
+    transform: rotate(-20deg);
+}
+
+.leaf-five {
+    left: 12px;
+    top: -23px;
+    transform: rotate(15deg);
+}
+
+.plant-pot {
+    position: absolute;
+    left: 12px;
+    bottom: 0;
+    width: 38px;
+    height: 45px;
+    border-radius: 5px 5px 13px 13px;
+    background: #c5a77d;
+}
+
+/* Bintang dekorasi */
+
+.floating-star {
+    position: absolute;
+    color: var(--gold);
+    animation: floating 3s ease-in-out infinite;
+}
+
+.star-one {
+    top: 35px;
+    left: 55px;
+    font-size: 21px;
+}
+
+.star-two {
+    top: 75px;
+    right: 55px;
+    font-size: 24px;
+    animation-delay: 0.6s;
+}
+
+.star-three {
+    bottom: 48px;
+    left: 90px;
+    font-size: 15px;
+    animation-delay: 1s;
+}
+
+/* =================================
+   7. LOADING
+================================= */
+
+.launch-bottom {
+    width: 190px;
+    margin-top: 4px;
+}
+
+.loading-track {
+    width: 100%;
+    height: 4px;
+    overflow: hidden;
+    border-radius: 10px;
+    background: rgba(82, 107, 88, 0.15);
+}
+
+.loading-progress {
+    width: 0;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #789276, #c6a66b);
+    animation: loading 3.7s linear forwards;
+}
+
+.launch-bottom p {
+    margin-top: 11px;
+    color: #849184;
+    font-size: 10px;
+    letter-spacing: 0.3px;
+}
+
+/* =================================
+   8. FOOTER
+================================= */
+
+.launch-footer {
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #89978a;
+    font-size: 9px;
+    letter-spacing: 1.2px;
+}
+
+/* =================================
+   9. ANIMASI
+================================= */
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floating {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-9px);
+    }
+}
+
+@keyframes loading {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+/* =================================
+   10. RESPONSIVE TABLET
+================================= */
+
+@media (max-width: 768px) {
+    .launch-screen {
+        padding: 25px 6%;
+    }
+
+    .launch-content h1 {
+        font-size: 55px;
+    }
+}
+
+/* =================================
+   11. RESPONSIVE HP
+================================= */
+
+@media (max-width: 480px) {
+    .launch-screen {
+        padding: 22px 23px;
+    }
+
+    .launch-header {
+        font-size: 14px;
+    }
+
+    .brand-mark {
+        width: 39px;
+        height: 39px;
+    }
+
+    .launch-content {
+        padding-bottom: 10px;
+    }
+
+    .eyebrow {
+        gap: 8px;
+        font-size: 8px;
+        letter-spacing: 1.8px;
+    }
+
+    .eyebrow-line {
+        width: 17px;
+    }
+
+    .launch-content h1 {
+        margin-top: 17px;
+        font-size: clamp(40px, 11vw, 52px);
+    }
+
+    .launch-description {
+        max-width: 320px;
+        margin-top: 15px;
+        font-size: 12px;
+    }
+
+    .book-scene {
+        width: 310px;
+        max-width: 100%;
+        height: 190px;
+        margin-top: 10px;
+        transform: scale(0.94);
+    }
+
+    .plant {
+        right: 15px;
+    }
+
+    .star-one {
+        left: 35px;
+    }
+
+    .star-two {
+        right: 35px;
+    }
+
+    .launch-bottom {
+        width: 175px;
+    }
+
+    .launch-footer {
+        font-size: 8px;
+        letter-spacing: 0.6px;
+    }
+}
+
+/* HP dengan layar pendek */
+
+@media (max-height: 650px) {
+    .launch-screen {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .launch-content h1 {
+        font-size: 40px;
+        margin-top: 10px;
+    }
+
+    .launch-description {
+        margin-top: 9px;
+        font-size: 11px;
+    }
+
+    .book-scene {
+        height: 145px;
+        margin-top: 0;
+        transform: scale(0.78);
+    }
+
+    .launch-bottom {
+        margin-top: -5px;
+    }
+}
+
+/* Menghormati pengaturan pengurangan gerakan */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}

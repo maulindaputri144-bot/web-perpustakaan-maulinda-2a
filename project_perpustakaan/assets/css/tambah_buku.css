@@ -1,0 +1,337 @@
+
+/* =========================================
+   TAMBAH BUKU - MINI DIGITAL LIBRARY
+========================================= */
+
+.tambah-main {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 35px 25px 45px;
+    box-sizing: border-box;
+}
+
+/* Judul halaman */
+
+.tambah-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.tambah-heading h1 {
+    color: #344b3b;
+    font-size: 32px;
+    margin: 0 0 8px;
+}
+
+.tambah-heading p {
+    color: #788477;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.tambah-decoration {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 18px 25px;
+    background: #e8eee3;
+    border-radius: 20px;
+    font-size: 35px;
+}
+
+.tambah-decoration span:last-child {
+    color: #c6a66b;
+    font-size: 23px;
+}
+
+/* Navigasi */
+
+.tambah-navigation {
+    margin-bottom: 20px;
+}
+
+.tambah-navigation .nav-back {
+    color: #526b58;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.tambah-navigation .nav-back:hover {
+    color: #344b3b;
+}
+
+/* Panel formulir */
+
+.form-panel {
+    width: 100%;
+    padding: 30px;
+    background: #ffffff;
+    border: 1px solid #e8ece4;
+    border-radius: 18px;
+    box-shadow: 0 8px 28px rgba(52, 75, 59, 0.06);
+    box-sizing: border-box;
+}
+
+.form-panel-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding-bottom: 22px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #edf0ea;
+}
+
+.form-panel-heading h2 {
+    color: #344b3b;
+    font-size: 21px;
+    margin: 0 0 7px;
+}
+
+.form-panel-heading p {
+    color: #899487;
+    font-size: 12px;
+    margin: 0;
+}
+
+.form-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    background: #edf2e9;
+    border-radius: 15px;
+    font-size: 27px;
+}
+
+/* Grid formulir */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 21px 20px;
+}
+
+.form-group {
+    min-width: 0;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 9px;
+    color: #526254;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.form-group label span {
+    color: #c47a65;
+}
+
+.form-group input {
+    width: 100%;
+    min-height: 45px;
+    padding: 11px 13px;
+    background: #fafbf8;
+    border: 1px solid #e2e8df;
+    border-radius: 9px;
+    color: #526254;
+    font-family: inherit;
+    font-size: 13px;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input::placeholder {
+    color: #a1aaa0;
+}
+
+.form-group input:focus {
+    background: #ffffff;
+    border-color: #849b7e;
+    box-shadow: 0 0 0 3px rgba(132, 155, 126, 0.12);
+}
+
+/* Input file */
+
+.form-group input[type="file"] {
+    min-height: auto;
+    padding: 10px;
+    background: #fafbf8;
+    cursor: pointer;
+}
+
+.form-group input[type="file"]::file-selector-button {
+    padding: 8px 12px;
+    margin-right: 12px;
+    background: #e8eee3;
+    border: none;
+    border-radius: 7px;
+    color: #526b58;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.form-group input[type="file"]::file-selector-button:hover {
+    background: #dce7d7;
+}
+
+/* Petunjuk */
+
+.petunjuk {
+    display: block;
+    margin-top: 7px;
+    color: #899487;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+/* Catatan informasi */
+
+.form-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 25px;
+    padding: 13px 15px;
+    background: #f5f7f1;
+    border: 1px solid #e9eee4;
+    border-radius: 10px;
+}
+
+.form-note span {
+    color: #8a9b7f;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.form-note p {
+    margin: 1px 0 0;
+    color: #758174;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+/* Tombol formulir */
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #edf0ea;
+}
+
+.button-cancel,
+.button-save {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    min-height: 42px;
+    padding: 0 19px;
+    border: none;
+    border-radius: 9px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.button-cancel {
+    background: #f0f1eb;
+    color: #657263;
+}
+
+.button-cancel:hover {
+    background: #e3e8df;
+}
+
+.button-save {
+    background: #526b58;
+    color: #ffffff;
+}
+
+.button-save:hover {
+    background: #344b3b;
+    transform: translateY(-2px);
+}
+
+/* Responsif */
+
+@media (max-width: 768px) {
+    .tambah-main {
+        padding: 25px 15px 35px;
+    }
+
+    .tambah-heading h1 {
+        font-size: 26px;
+    }
+
+    .tambah-decoration {
+        padding: 13px;
+        font-size: 27px;
+    }
+
+    .form-panel {
+        padding: 22px 18px;
+    }
+}
+
+@media (max-width: 520px) {
+    .tambah-heading {
+        align-items: flex-start;
+    }
+
+    .tambah-heading h1 {
+        font-size: 23px;
+    }
+
+    .tambah-heading p {
+        font-size: 12px;
+    }
+
+    .tambah-decoration {
+        font-size: 22px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .form-group.full-width {
+        grid-column: auto;
+    }
+
+    .form-panel-heading h2 {
+        font-size: 19px;
+    }
+
+    .form-actions {
+        flex-direction: column-reverse;
+    }
+
+    .button-cancel,
+    .button-save {
+        width: 100%;
+        min-height: 44px;
+    }
+}

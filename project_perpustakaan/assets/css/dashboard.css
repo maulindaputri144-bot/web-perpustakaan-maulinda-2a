@@ -1,0 +1,692 @@
+
+/* =========================================
+   MINI DIGITAL LIBRARY - DASHBOARD
+   Tema: Sage Green, Cream, White, Gold
+========================================= */
+
+:root {
+    --sage: #dfe8da;
+    --sage-light: #edf2e9;
+    --sage-dark: #526b58;
+    --forest: #344b3b;
+    --cream: #f7f5ec;
+    --gold: #c6a66b;
+    --text: #526254;
+    --muted: #89958a;
+    --white: #ffffff;
+    --border: #e8ede5;
+    --shadow: 0 10px 30px rgba(52, 75, 59, 0.07);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--cream);
+    color: var(--text);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+}
+
+/* =========================================
+   WRAPPER
+========================================= */
+
+.dashboard-wrapper {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.dashboard-header {
+    min-height: 82px;
+    padding: 14px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid var(--border);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-mark {
+    width: 43px;
+    height: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background: var(--forest);
+    color: var(--white);
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.brand-name {
+    display: flex;
+    flex-direction: column;
+    color: var(--forest);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.brand-name small {
+    margin-top: 3px;
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 400;
+}
+
+.header-user {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.user-avatar {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--sage);
+    color: var(--forest);
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.user-info strong {
+    color: var(--forest);
+    font-size: 13px;
+}
+
+.user-info span {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.dashboard-main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 35px 30px 25px;
+    flex: 1;
+}
+
+/* =========================================
+   WELCOME SECTION
+========================================= */
+
+.welcome-section {
+    min-height: 205px;
+    padding: 30px 42px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 25px;
+    background: linear-gradient(
+        115deg,
+        #e2ebdd,
+        #f0f2e8
+    );
+}
+
+.welcome-text {
+    position: relative;
+    z-index: 2;
+}
+
+.section-label {
+    color: var(--sage-dark);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.welcome-text h1 {
+    margin-top: 12px;
+    color: var(--forest);
+    font-size: clamp(25px, 4vw, 34px);
+    font-weight: 750;
+}
+
+.welcome-text p {
+    margin-top: 9px;
+    color: var(--text);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.welcome-illustration {
+    width: 190px;
+    height: 145px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.illustration-book {
+    font-size: 76px;
+    filter: drop-shadow(0 8px 8px rgba(52, 75, 59, 0.12));
+    animation: bookFloat 3s ease-in-out infinite;
+}
+
+.illustration-star {
+    position: absolute;
+    top: 5px;
+    right: 28px;
+    color: var(--gold);
+    font-size: 27px;
+}
+
+.illustration-leaf {
+    position: absolute;
+    bottom: 3px;
+    left: 10px;
+    font-size: 34px;
+}
+
+@keyframes bookFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
+}
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.statistics-section,
+.menu-section {
+    margin-top: 35px;
+}
+
+.section-heading {
+    margin-bottom: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.section-heading h2 {
+    margin-top: 5px;
+    color: var(--forest);
+    font-size: 21px;
+}
+
+.live-label {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.live-label span {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #7eaa7c;
+}
+
+/* =========================================
+   STATISTICS
+========================================= */
+
+.statistics-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.stat-card {
+    min-height: 130px;
+    padding: 20px 17px;
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 30px rgba(52, 75, 59, 0.11);
+}
+
+.stat-icon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 13px;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.icon-book {
+    background: #e8eee2;
+    color: #526b58;
+}
+
+.icon-stock {
+    background: #f4eee0;
+    color: #a78a53;
+}
+
+.icon-available {
+    background: #e5f1e6;
+    color: #5b9365;
+}
+
+.icon-unavailable {
+    background: #f5eae3;
+    color: #b27b5e;
+}
+
+.stat-information p {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.stat-information h3 {
+    margin: 6px 0;
+    color: var(--forest);
+    font-size: 27px;
+}
+
+.stat-information span {
+    color: var(--muted);
+    font-size: 10px;
+    line-height: 1.4;
+}
+
+/* =========================================
+   MENU
+========================================= */
+
+.menu-section {
+    margin-top: 35px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 17px;
+}
+
+.menu-card {
+    min-height: 145px;
+    padding: 22px;
+    display: flex;
+    align-items: flex-start;
+    gap: 17px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+    transition: 0.25s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-4px);
+    border-color: #cbd9c8;
+}
+
+.menu-icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background: var(--sage-light);
+    font-size: 24px;
+}
+
+.add-icon {
+    background: #f4eee0;
+    color: #a78a53;
+    font-size: 28px;
+}
+
+.menu-description h3 {
+    color: var(--forest);
+    font-size: 16px;
+}
+
+.menu-description p {
+    margin-top: 7px;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.menu-link {
+    margin-top: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--sage-dark);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.menu-link span {
+    font-size: 17px;
+    transition: transform 0.2s ease;
+}
+
+.menu-card:hover .menu-link span {
+    transform: translateX(4px);
+}
+
+/* =========================================
+   INFORMATION
+========================================= */
+
+.information-section {
+    margin-top: 27px;
+    padding: 17px 21px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    background: #edf1e8;
+    border: 1px solid #e1e9dc;
+    border-radius: 15px;
+}
+
+.information-icon {
+    color: var(--gold);
+    font-size: 23px;
+}
+
+.information-section strong {
+    color: var(--forest);
+    font-size: 13px;
+}
+
+.information-section p {
+    margin-top: 4px;
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.dashboard-footer {
+    min-height: 65px;
+    padding: 12px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--white);
+    border-top: 1px solid var(--border);
+}
+
+.dashboard-footer > span {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.logout-button {
+    padding: 9px 16px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    border: 1px solid #eadbd3;
+    border-radius: 10px;
+    background: #fff8f4;
+    color: #a56f59;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.logout-button:hover {
+    background: #f7e9e1;
+}
+
+.logout-button span {
+    font-size: 17px;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .dashboard-main {
+        padding: 28px 22px;
+    }
+
+    .statistics-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .dashboard-header {
+        min-height: 70px;
+        padding: 12px 17px;
+    }
+
+    .brand-mark {
+        width: 38px;
+        height: 38px;
+        font-size: 19px;
+    }
+
+    .brand-name {
+        font-size: 13px;
+    }
+
+    .brand-name small {
+        font-size: 9px;
+    }
+
+    .header-user {
+        gap: 7px;
+    }
+
+    .user-avatar {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+
+    .user-info strong {
+        max-width: 95px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 11px;
+    }
+
+    .user-info span {
+        font-size: 10px;
+    }
+
+    .dashboard-main {
+        padding: 22px 16px;
+    }
+
+    .welcome-section {
+        min-height: 155px;
+        padding: 23px 20px;
+        border-radius: 19px;
+    }
+
+    .welcome-text h1 {
+        font-size: 23px;
+    }
+
+    .welcome-text p {
+        max-width: 230px;
+        font-size: 11px;
+    }
+
+    .welcome-illustration {
+        width: 90px;
+        height: 100px;
+        flex-shrink: 0;
+    }
+
+    .illustration-book {
+        font-size: 48px;
+    }
+
+    .illustration-star {
+        right: 0;
+        font-size: 19px;
+    }
+
+    .illustration-leaf {
+        left: 0;
+        font-size: 23px;
+    }
+
+    .statistics-section,
+    .menu-section {
+        margin-top: 27px;
+    }
+
+    .section-heading h2 {
+        font-size: 18px;
+    }
+
+    .live-label {
+        font-size: 9px;
+    }
+
+    .statistics-grid {
+        gap: 10px;
+    }
+
+    .stat-card {
+        min-height: 105px;
+        padding: 13px 10px;
+        gap: 9px;
+        border-radius: 14px;
+    }
+
+    .stat-icon {
+        width: 32px;
+        height: 32px;
+        border-radius: 10px;
+        font-size: 17px;
+    }
+
+    .stat-information p {
+        font-size: 10px;
+    }
+
+    .stat-information h3 {
+        font-size: 23px;
+    }
+
+    .stat-information span {
+        font-size: 9px;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+        gap: 11px;
+    }
+
+    .menu-card {
+        min-height: 120px;
+        padding: 17px;
+        gap: 13px;
+    }
+
+    .menu-icon {
+        width: 42px;
+        height: 42px;
+        font-size: 21px;
+    }
+
+    .menu-description h3 {
+        font-size: 14px;
+    }
+
+    .menu-description p {
+        font-size: 11px;
+    }
+
+    .information-section {
+        margin-top: 20px;
+        padding: 14px;
+    }
+
+    .dashboard-footer {
+        padding: 12px 16px;
+    }
+
+    .dashboard-footer > span {
+        font-size: 9px;
+    }
+
+    .logout-button {
+        padding: 8px 12px;
+        font-size: 10px;
+    }
+
+}
